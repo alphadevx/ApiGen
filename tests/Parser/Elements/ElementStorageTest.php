@@ -115,7 +115,7 @@ class ElementStorageTest extends PHPUnit_Framework_TestCase
 			return $elements;
 		});
 
-		$iReflectionClassMock = Mockery::mock('TokenReflection\IReflection', 'Nette\Object');
+		$iReflectionClassMock = Mockery::mock('TokenReflection\IReflection', 'Nette\SmartObject');
 		$iReflectionClassMock->shouldReceive('getAnnotations')->andReturn([]);
 
 		$this->reflectionClass = new ReflectionClass($iReflectionClassMock);

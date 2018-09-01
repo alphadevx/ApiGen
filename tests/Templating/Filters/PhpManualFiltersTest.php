@@ -30,7 +30,7 @@ class PhpManualFiltersTest extends PHPUnit_Framework_TestCase
 
 	public function testManualUrlForExtension()
 	{
-		$reflectionMock = Mockery::mock('TokenReflection\IReflectionExtension', 'Nette\Object');
+		$reflectionMock = Mockery::mock('TokenReflection\IReflectionExtension', 'Nette\SmartObject');
 		$reflectionMock->shouldReceive('getName')->andReturn('pdf');
 		$reflectionExtension = new ReflectionExtension($reflectionMock);
 
@@ -43,7 +43,7 @@ class PhpManualFiltersTest extends PHPUnit_Framework_TestCase
 
 	public function testManualUrlForDateExtension()
 	{
-		$reflectionMock = Mockery::mock('TokenReflection\IReflectionExtension', 'Nette\Object');
+		$reflectionMock = Mockery::mock('TokenReflection\IReflectionExtension', 'Nette\SmartObject');
 		$reflectionMock->shouldReceive('getName')->andReturn('date');
 		$reflectionExtension = new ReflectionExtension($reflectionMock);
 
@@ -80,7 +80,7 @@ class PhpManualFiltersTest extends PHPUnit_Framework_TestCase
 
 	public function testManualUrlForClass()
 	{
-		$reflectionMock = Mockery::mock('TokenReflection\IReflectionExtension', 'Nette\Object');
+		$reflectionMock = Mockery::mock('TokenReflection\IReflectionExtension', 'Nette\SmartObject');
 		$reflectionMock->shouldReceive('getName')->andReturn('splFileInfo');
 		$reflectionClass = new ReflectionClass($reflectionMock);
 
@@ -93,7 +93,7 @@ class PhpManualFiltersTest extends PHPUnit_Framework_TestCase
 
 	public function testManualUrlForProperty()
 	{
-		$reflectionMock = Mockery::mock('TokenReflection\IReflectionExtension', 'Nette\Object');
+		$reflectionMock = Mockery::mock('TokenReflection\IReflectionExtension', 'Nette\SmartObject');
 		$reflectionMock->shouldReceive('getName')->andReturn('ZipArchive');
 		$reflectionClass = new ReflectionClass($reflectionMock);
 
@@ -101,7 +101,7 @@ class PhpManualFiltersTest extends PHPUnit_Framework_TestCase
 		$parserResultMock->shouldReceive('getElementsByType')->andReturn(['ZipArchive' => $reflectionClass]);
 		$reflectionClass->setParserResult($parserResultMock);
 
-		$reflectionMock = Mockery::mock('TokenReflection\IReflectionExtension', 'Nette\Object');
+		$reflectionMock = Mockery::mock('TokenReflection\IReflectionExtension', 'Nette\SmartObject');
 		$reflectionMock->shouldReceive('getName')->andReturn('status');
 		$reflectionMock->shouldReceive('getDeclaringClass')->andReturn($reflectionClass);
 		$reflectionMock->shouldReceive('getDeclaringClassName')->andReturn($reflectionClass->getName());
@@ -124,7 +124,7 @@ class PhpManualFiltersTest extends PHPUnit_Framework_TestCase
 		$parserResultMock = Mockery::mock('ApiGen\Parser\ParserResult');
 		$parserResultMock->shouldReceive('getElementsByType')->andReturn(['splFileInfo' => $reflectionClass]);
 
-		$reflectionMock = Mockery::mock('TokenReflection\IReflectionMethod', 'Nette\Object');
+		$reflectionMock = Mockery::mock('TokenReflection\IReflectionMethod', 'Nette\SmartObject');
 		$reflectionMock->shouldReceive('getName')->andReturn('isLink');
 		$reflectionMock->shouldReceive('getDeclaringClass')->andReturn($reflectionClass);
 		$reflectionMock->shouldReceive('getDeclaringClassName')->andReturn('splFileInfo');
@@ -147,7 +147,7 @@ class PhpManualFiltersTest extends PHPUnit_Framework_TestCase
 		$parserResultMock = Mockery::mock('ApiGen\Parser\ParserResult');
 		$parserResultMock->shouldReceive('getElementsByType')->andReturn(['json-decode' => $reflectionClass]);
 
-		$reflectionMock = Mockery::mock('TokenReflection\IReflectionFunction', 'Nette\Object');
+		$reflectionMock = Mockery::mock('TokenReflection\IReflectionFunction', 'Nette\SmartObject');
 		$reflectionMock->shouldReceive('getName')->andReturn('json-decode');
 
 		$reflectionFunction = new ReflectionFunction($reflectionMock);
@@ -168,7 +168,7 @@ class PhpManualFiltersTest extends PHPUnit_Framework_TestCase
 		$parserResultMock = Mockery::mock('ApiGen\Parser\ParserResult');
 		$parserResultMock->shouldReceive('getElementsByType')->andReturn(['reflection' => $reflectionClass]);
 
-		$reflectionMock = Mockery::mock('TokenReflection\IReflectionConstant', 'Nette\Object');
+		$reflectionMock = Mockery::mock('TokenReflection\IReflectionConstant', 'Nette\SmartObject');
 		$reflectionMock->shouldReceive('getName')->andReturn('IS_STATIC');
 		$reflectionMock->shouldReceive('getDeclaringClassName')->andReturn('reflection');
 

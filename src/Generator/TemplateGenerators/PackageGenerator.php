@@ -20,7 +20,7 @@ use Nette;
 /**
  * @method onGenerateProgress()
  */
-class PackageGenerator extends Nette\Object implements ConditionalTemplateGenerator, StepCounter
+class PackageGenerator extends Nette\SmartObject implements ConditionalTemplateGenerator, StepCounter
 {
 
 	/**

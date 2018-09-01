@@ -49,7 +49,7 @@ class ReflectionFactoryTest extends PHPUnit_Framework_TestCase
 
 	public function testCreateFromReflectionClass()
 	{
-		$tokenReflectionClassMock = Mockery::mock('TokenReflection\IReflectionClass', 'Nette\Object');
+		$tokenReflectionClassMock = Mockery::mock('TokenReflection\IReflectionClass', 'Nette\SmartObject');
 		$reflectionClass = $this->reflectionFactory->createFromReflection($tokenReflectionClassMock);
 		$this->assertInstanceOf('ApiGen\Reflection\ReflectionClass', $reflectionClass);
 		$this->checkLoadedProperties($reflectionClass);
@@ -69,7 +69,7 @@ class ReflectionFactoryTest extends PHPUnit_Framework_TestCase
 
 	public function testCreateFromReflectionFunction()
 	{
-		$tokenReflectionFunctionMock = Mockery::mock('TokenReflection\IReflectionFunction', 'Nette\Object');
+		$tokenReflectionFunctionMock = Mockery::mock('TokenReflection\IReflectionFunction', 'Nette\SmartObject');
 		$reflectionFunction = $this->reflectionFactory->createFromReflection($tokenReflectionFunctionMock);
 		$this->assertInstanceOf('ApiGen\Reflection\ReflectionFunction', $reflectionFunction);
 		$this->checkLoadedProperties($reflectionFunction);
@@ -78,7 +78,7 @@ class ReflectionFactoryTest extends PHPUnit_Framework_TestCase
 
 	public function testCreateFromReflectionMethod()
 	{
-		$tokenReflectionMethodMock = Mockery::mock('TokenReflection\IReflectionMethod', 'Nette\Object');
+		$tokenReflectionMethodMock = Mockery::mock('TokenReflection\IReflectionMethod', 'Nette\SmartObject');
 		$reflectionMethod = $this->reflectionFactory->createFromReflection($tokenReflectionMethodMock);
 		$this->assertInstanceOf('ApiGen\Reflection\ReflectionMethod', $reflectionMethod);
 		$this->checkLoadedProperties($reflectionMethod);
@@ -87,7 +87,7 @@ class ReflectionFactoryTest extends PHPUnit_Framework_TestCase
 
 	public function testCreateFromReflectionProperty()
 	{
-		$tokenReflectionPropertyMock = Mockery::mock('TokenReflection\IReflectionProperty', 'Nette\Object');
+		$tokenReflectionPropertyMock = Mockery::mock('TokenReflection\IReflectionProperty', 'Nette\SmartObject');
 		$reflectionProperty = $this->reflectionFactory->createFromReflection($tokenReflectionPropertyMock);
 		$this->assertInstanceOf('ApiGen\Reflection\ReflectionProperty', $reflectionProperty);
 		$this->checkLoadedProperties($reflectionProperty);
@@ -96,7 +96,7 @@ class ReflectionFactoryTest extends PHPUnit_Framework_TestCase
 
 	public function testCreateFromReflectionParameter()
 	{
-		$tokenReflectionParameterMock = Mockery::mock('TokenReflection\IReflectionParameter', 'Nette\Object');
+		$tokenReflectionParameterMock = Mockery::mock('TokenReflection\IReflectionParameter', 'Nette\SmartObject');
 		$reflectionParameter = $this->reflectionFactory->createFromReflection($tokenReflectionParameterMock);
 		$this->assertInstanceOf('ApiGen\Reflection\ReflectionParameter', $reflectionParameter);
 		$this->checkLoadedProperties($reflectionParameter);
@@ -105,7 +105,7 @@ class ReflectionFactoryTest extends PHPUnit_Framework_TestCase
 
 	public function testCreateFromReflectionConstant()
 	{
-		$tokenReflectionConstantMock = Mockery::mock('TokenReflection\IReflectionConstant', 'Nette\Object');
+		$tokenReflectionConstantMock = Mockery::mock('TokenReflection\IReflectionConstant', 'Nette\SmartObject');
 		$reflectionConstant = $this->reflectionFactory->createFromReflection($tokenReflectionConstantMock);
 		$this->assertInstanceOf('ApiGen\Reflection\ReflectionConstant', $reflectionConstant);
 		$this->checkLoadedProperties($reflectionConstant);
@@ -114,7 +114,7 @@ class ReflectionFactoryTest extends PHPUnit_Framework_TestCase
 
 	public function testCreateFromReflectionExtension()
 	{
-		$tokenReflectionExtensionMock = Mockery::mock('TokenReflection\IReflectionExtension', 'Nette\Object');
+		$tokenReflectionExtensionMock = Mockery::mock('TokenReflection\IReflectionExtension', 'Nette\SmartObject');
 		$reflectionExtension = $this->reflectionFactory->createFromReflection($tokenReflectionExtensionMock);
 		$this->assertInstanceOf('ApiGen\Reflection\ReflectionExtension', $reflectionExtension);
 		$this->checkLoadedProperties($reflectionExtension);

@@ -17,7 +17,7 @@ use Nette\Utils\Strings;
 /**
  * @method Configuration onOptionsResolve(array $config)
  */
-class Configuration extends Nette\Object
+class Configuration extends Nette\SmartObject
 {
 
 	const GROUPS_AUTO = 'auto';

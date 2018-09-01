@@ -22,7 +22,7 @@ use Nette;
 /**
  * @method onGenerateProgress()
  */
-class ConstantElementGenerator extends Nette\Object implements TemplateGenerator, StepCounter
+class ConstantElementGenerator extends Nette\SmartObject implements TemplateGenerator, StepCounter
 {
 
 	/**

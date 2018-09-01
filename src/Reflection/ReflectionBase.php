@@ -27,7 +27,7 @@ use TokenReflection\IReflectionProperty;
 /**
  * @method string getDocComment()
  */
-abstract class ReflectionBase extends Nette\Object implements Reflection
+abstract class ReflectionBase extends Nette\SmartObject implements Reflection
 {
 
 	/**
