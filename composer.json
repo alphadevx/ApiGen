@@ -26,7 +26,7 @@
 		"kukulich/fshl": "~2.1",
 		"andrewsville/php-token-reflection": "~1.4",
 		"michelf/php-markdown": "~1.4",
-		"kdyby/events": "~2.4",
+		"kdyby/events": "~3.0",
 		"symfony/options-resolver": "~2.6.1",
 		"symfony/console": "~2.6",
 		"symfony/yaml": "~2.6",
