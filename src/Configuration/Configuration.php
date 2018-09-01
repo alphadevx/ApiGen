@@ -17,7 +17,7 @@ use Nette\Utils\Strings;
 /**
  * @method Configuration onOptionsResolve(array $config)
  */
-class Configuration extends Nette\SmartObject
+class Configuration extends ApiGen\SmartObject
 {
 
 	const GROUPS_AUTO = 'auto';

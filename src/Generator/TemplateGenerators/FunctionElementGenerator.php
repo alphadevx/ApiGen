@@ -22,7 +22,7 @@ use Nette;
 /**
  * @method onGenerateProgress()
  */
-class FunctionElementGenerator extends Nette\SmartObject implements TemplateGenerator, StepCounter
+class FunctionElementGenerator extends ApiGen\SmartObject implements TemplateGenerator, StepCounter
 {
 
 	/**

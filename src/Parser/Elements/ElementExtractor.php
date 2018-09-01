@@ -13,7 +13,7 @@ use ApiGen\Reflection\ReflectionClass;
 use Nette;
 
 
-class ElementExtractor extends Nette\SmartObject
+class ElementExtractor extends ApiGen\SmartObject
 {
 
 	/**

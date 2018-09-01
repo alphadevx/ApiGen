@@ -27,7 +27,7 @@ use Nette;
 /**
  * @method onGenerateProgress()
  */
-class SourceCodeGenerator extends Nette\SmartObject implements ConditionalTemplateGenerator, StepCounter
+class SourceCodeGenerator extends ApiGen\SmartObject implements ConditionalTemplateGenerator, StepCounter
 {
 
 	/**
