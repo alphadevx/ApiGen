@@ -27,7 +27,7 @@ use TokenReflection\IReflectionProperty;
 /**
  * @method string getDocComment()
  */
-abstract class ReflectionBase extends ApiGen\SmartObject implements Reflection
+abstract class ReflectionBase extends \ApiGen\SmartObject implements Reflection
 {
 
 	/**
